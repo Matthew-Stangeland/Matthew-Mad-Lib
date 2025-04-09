@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MadLib Practice</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <h1>The Fantastical and Quite Odd Story<br>by Matthew Stangeland</h1>
+    <form>
+        <label for="firstName">Enter a Name:</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        
+        <label for="adjective">Enter an adjective:</label><br>
+        <input type="text" id="adjective" name="adjective"><br><br>
+        
+        <label for="place">Enter a place:</label><br>
+        <input type="text" id="place" name="place"><br><br>
+        
+        <label for="famous">Enter a famous person's name:</label><br>
+        <input type="text" id="famous" name="famous"><br><br>
+        
+        <label for="quote">What would be something they would say?</label><br>
+        <input type="text" id="quote" name="quote"><br><br>
+        
+        <label for="verb">Select a verb</label><br>
+        <select id="verb" name="verb">
+            <option value="spat">spat</option>
+            <option value="backflipped">backflipped</option>
+            <option value="crapped">crapped</option>
+            <option value="crashed">crashed out</option>
+            
+        </select><br><br>
+        
+        <label for="place2">Enter place number dos:</label><br>
+        <select id="place2" name="place2">
+            <option value="park">the park</option>
+            <option value="the north pole">the north pole</option>
+            <option value="china">china</option>
+            <option value="mars">mars</option>
+            <option value="void">the suffocating void of nothingness</option>
+            <option value="home">home</option>
+            
+        </select><br><br>
+        <label for="death">What would be an interesting way to die?</label><br>
+        <input type="text" id="death" name="death"><br><br>
+        
+        <input type="button" value="Create Story" onClick="madLib()">
+        
+    </form>
+<hr>
+<h3 id="madLibHere"></h3>
+<script>
+    function madLib(){
+        var name=document.getElementById("firstName").value;
+        var adjective = document.getElementById("adjective").value;
+        var verb = document.getElementById("verb").value;
+        var place = document.getElementById("place").value;
+        var famous = document.getElementById("famous").value;
+        var quote = document.getElementById("quote").value;
+        var place2 = document.getElementById("place2").value;
+        var death = document.getElementById("death").value;
+        
+        //put the story
+        document.getElementById("madLibHere").innerHTML=name + " " + verb + " by the " + place + ". " + name + " was " + adjective + " at this. All of a sudden, the great " + famous + " walked up to " + name + " and said '" + quote + ".' " + name + " got mad, so " + name + " " + verb + " again and then left. " + name + " " + verb + " all the way to " + place2 + ". Then, all of a sudden, " + name + " saw " + famous + " chasing quietly behind. '" + quote + "' they said again. ENOUGH OF THIS! " + name + " thought. " + name + " then destroyed " + famous + " by " + death + ". The evil was over, leaving " + name + " to live happily ever after on or in " + place2 + ". THE END!" ;
+    }
+</script> 
+
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
